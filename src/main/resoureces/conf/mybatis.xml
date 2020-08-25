@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <!--设置别名-->
+    <typeAliases>
+        <package name="com.shangfang.domain"></package>
+    </typeAliases>
+    <mappers>
+        <!--
+        name是包名，这个包里所有的mapper.xml一次就能加载
+        1.使用package映射文件名必须和类名一模一样
+        2.接口和映射文件必须在统一目录
+        -->
+        <package name="com.shangfang.dao"></package>
+    </mappers>
+</configuration>

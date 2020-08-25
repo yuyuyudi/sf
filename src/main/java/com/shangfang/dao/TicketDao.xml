@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangfang.dao.TicketDao">
+    <select id="selectTickes" resultType="com.shangfang.domain.Ticket">
+        select id,type,price,num from ticketstore
+    </select>
+
+    <update id="updateNum">
+        update ticketstore set num=#{num} where id=#{id}
+    </update>
+
+    <update id="updateNumBuy">
+        update ticketstore set num=num-#{num} where id=#{id}
+    </update>
+</mapper>
+        <!--指定约束文件-->

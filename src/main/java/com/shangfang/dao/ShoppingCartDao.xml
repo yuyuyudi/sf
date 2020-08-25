@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangfang.dao.ShoppingCartDao">
+    <select id="selectTicket" resultType="com.shangfang.domain.ShoppingCart">
+        select tickettype,ticketnum from ticketsold
+    </select>
+    <insert id="insertTicket">
+        insert into ticketsold (tickettype,ticketnum) values (#{tickettype},#{ticketnum})
+    </insert>
+    <delete id="deleteShoppingcart">
+        delete from ticketsold where 1=1
+    </delete>
+</mapper>
+        <!--指定约束文件-->

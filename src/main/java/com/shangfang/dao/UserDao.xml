@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shangfang.dao.UserDao">
+    <select id="selectUser" resultType="com.shangfang.domain.User">
+        select username,telephone,password,sign from user
+        where telephone=#{telephone} and password=#{password}
+    </select>
+    <insert id="insertuser">
+        insert into user(username,realname,sex,password,telephone,email,imageurl,interest,sign)
+        values(#{username},#{realname},#{sex},#{password},#{telephone},#{email},#{imageurl},#{interest},#{sign})
+    </insert>
+</mapper>
+        <!--指定约束文件-->
